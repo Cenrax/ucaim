@@ -4,6 +4,9 @@ import os
 from typing import Dict, Any, Optional
 from pydantic import BaseModel, Field
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class CAIMConfig(BaseModel):
