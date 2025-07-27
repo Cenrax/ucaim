@@ -1,0 +1,102 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caim"
+version = "0.1.0"
+description = "CAIM: A Cognitive AI Memory Framework for Enhanced Long-Term Agent Interactions"
+readme = "README.md"
+authors = [
+    {name = "CAIM Team", email = "caim@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+keywords = ["ai", "memory", "cognitive", "llm", "agents"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.35.0",
+    "huggingface-hub>=0.17.0",
+    "openai>=1.3.0",
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "sentence-transformers>=2.2.0",
+    "chromadb>=0.4.0",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.4.0",
+    "python-dotenv>=1.0.0",
+    "streamlit>=1.28.0",
+    "plotly>=5.17.0",
+    "datasets>=2.14.0",
+    "evaluate>=0.4.0",
+    "accelerate>=0.24.0",
+    "langchain>=0.0.300",
+    "redis>=5.0.0",
+    "psycopg2-binary>=2.9.0",
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.12.0",
+    "rich>=13.6.0",
+    "click>=8.1.0",
+    "tqdm>=4.66.0",
+    "aiofiles>=23.2.0",
+    "httpx>=0.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.6.0",
+    "pre-commit>=3.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/caim"
+Documentation = "https://caim.readthedocs.io"
+Repository = "https://github.com/example/caim.git"
+Issues = "https://github.com/example/caim/issues"
+
+[project.scripts]
+caim = "caim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["caim*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+show_error_codes = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+asyncio_mode = "auto"
