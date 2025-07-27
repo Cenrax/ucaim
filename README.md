@@ -351,12 +351,7 @@ CAIM is inspired by cognitive science research on human memory systems. If you u
 }
 ```
 
-## 📞 Support
 
-- **Documentation**: [Full documentation](https://caim.readthedocs.io)
-- **Issues**: [GitHub Issues](https://github.com/example/caim/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/example/caim/discussions)
-- **Email**: caim-support@example.com
 
 ## 🗺️ Roadmap
 
